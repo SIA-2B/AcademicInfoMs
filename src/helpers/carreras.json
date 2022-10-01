@@ -1,0 +1,286 @@
+{
+	"INGENIERIA": {
+		"SISTEMAS Y COMPUTACION": {
+			"plan": "2879",
+			"libre": 33,
+			"dis_op": 27,
+			"dis_ob": 54,
+			"fund_op": 36,
+			"fund_ob": 15,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 185
+		},
+		"CIVIL": {
+			"plan": "2542",
+			"libre": 36,
+			"dis_op": 12,
+			"dis_ob": 84,
+			"fund_op": 6,
+			"fund_ob": 43,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 207
+		},
+		"INDUSTRIAL": {
+			"plan": "2546",
+			"libre": 34,
+			"dis_op": 40,
+			"dis_ob": 52,
+			"fund_op": 20,
+			"fund_ob": 22,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 194
+		},
+		"ELECTRICA": {
+			"plan": "2544",
+			"libre": 33,
+			"dis_op": 8,
+			"dis_ob": 63,
+			"fund_op": 12,
+			"fund_ob": 51,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 193
+		},
+		"ELECTRONICA": {
+			"plan": "2545",
+			"libre": 34,
+			"dis_op": 6,
+			"dis_ob": 72,
+			"fund_op": 9,
+			"fund_ob": 51,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 198
+		},
+		"AGRICOLA": {
+			"plan": "2541",
+			"libre": 36,
+			"dis_op": 9,
+			"dis_ob": 76,
+			"fund_op": 10,
+			"fund_ob": 49,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 206
+		},
+		"MECANICA": {
+			"plan": "2547",
+			"libre": 36,
+			"dis_op": 6,
+			"dis_ob": 80,
+			"fund_op": 8,
+			"fund_ob": 50,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 196
+		},
+		"MECATRONICA": {
+			"plan": "2548",
+			"libre": 36,
+			"dis_op": 6,
+			"dis_ob": 81,
+			"fund_op": 9,
+			"fund_ob": 47,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 205
+		},
+		"QUIMICA": {
+			"plan": "2549",
+			"libre": 36,
+			"dis_op": 9,
+			"dis_ob": 66,
+			"fund_op": 6,
+			"fund_ob": 63,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 206
+		},
+		"AGRONOMICA": {
+			"plan": "1",
+			"libre": 36,
+			"dis_op": 6,
+			"dis_ob": 82,
+			"fund_op": 10,
+			"fund_ob": 40,
+			"trabajo": 6,
+			"nivelacion": 20,
+			"disponible": 200
+		}
+	},
+	"CIENCIAS HUMANAS": {
+		"FILOSOFIA": {
+			"plan": "20",
+			"libre": 27,
+			"dis_op": 58,
+			"dis_ob": 5,
+			"fund_op": 0,
+			"fund_ob": 24,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 138
+		},
+		"GEOGRAFIA": {
+			"plan": "3103",
+			"libre": 30,
+			"dis_op": 36,
+			"dis_ob": 15,
+			"fund_op": 3,
+			"fund_ob": 34,
+			"trabajo": 10,
+			"nivelacion": 16,
+			"disponible": 144
+		},
+		"HISTORIA": {
+			"plan": "21",
+			"libre": 24,
+			"dis_op": 49,
+			"dis_ob": 32,
+			"fund_op": 3,
+			"fund_ob": 3,
+			"trabajo": 10,
+			"nivelacion": 16,
+			"disponible": 137
+		},
+		"LINGUISTICA": {
+			"plan": "16938"
+		},
+		"PSICOLOGIA": {
+			"plan": "14",
+			"libre": 33,
+			"dis_op": 39,
+			"dis_ob": 44,
+			"fund_op": 9,
+			"fund_ob": 19,
+			"trabajo": 6,
+			"nivelacion": 16,
+			"disponible": 166
+		},
+		"SOCIOLOGIA": {
+			"plan": "16",
+			"libre": 30,
+			"dis_op": 30,
+			"dis_ob": 37,
+			"fund_op": 15,
+			"fund_ob": 9,
+			"trabajo": 10,
+			"nivelacion": 16,
+			"disponible": 146
+		},
+		"FILOSOFIA E IDIOMAS": {
+			"plan": "23",
+			"libre": 30,
+			"dis_op": 7,
+			"dis_ob": 63,
+			"fund_op": 3,
+			"fund_ob": 31,
+			"trabajo": 6,
+			"nivelacion": 16,
+			"disponible": 156
+		},
+		"ANTROPOLOGIA": {
+			"plan": "13",
+			"libre": 24,
+			"dis_op": 15,
+			"dis_ob": 61,
+			"fund_op": 0,
+			"fund_ob": 12,
+			"trabajo": 10,
+			"nivelacion": 16,
+			"disponible": 138
+		},
+		"ESPAÑOL Y FILOSOFIA CLASICA": {
+			"plan": "54036",
+			"libre": 26,
+			"dis_op": 27,
+			"dis_ob": 50,
+			"fund_op": 3,
+			"fund_ob": 9,
+			"trabajo": 10,
+			"nivelacion": 16,
+			"disponible": 141
+		}
+	},
+	"CIENCIAS": {
+		"BIOLOGIA": {
+			"plan": "31",
+			"libre": 32,
+			"dis_op": 0,
+			"dis_ob": 55,
+			"fund_op": 8,
+			"fund_ob": 60,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 179
+		},
+		"CIENCIAS DE LA COMPUTACION": {
+			"plan": "106341",
+			"libre": 28,
+			"dis_op": 20,
+			"dis_ob": 23,
+			"fund_op": 11,
+			"fund_ob": 49,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 149
+		},
+		"ESTADISTICA": {
+			"plan": "32",
+			"libre": 28,
+			"dis_op": 41,
+			"dis_ob": 12,
+			"fund_op": 16,
+			"fund_ob": 36,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 157
+		},
+		"FARMACIA": {
+			"plan": "37",
+			"libre": 37,
+			"dis_op": 12,
+			"dis_ob": 81,
+			"fund_op": 9,
+			"fund_ob": 38,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 201
+		},
+		"FISICA": {
+			"plan": "33",
+			"libre": 32,
+			"dis_op": 0,
+			"dis_ob": 79,
+			"fund_op": 10,
+			"fund_ob": 31,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 176
+		},
+		"GEOLOGIA": {
+			"plan": "34",
+			"libre": 33,
+			"dis_op": 15,
+			"dis_ob": 66,
+			"fund_op": 6,
+			"fund_ob": 36,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 182
+		},
+		"MATEMATICAS": {
+			"plan": "35",
+			"libre": 28,
+			"dis_op": 12,
+			"dis_ob": 40,
+			"fund_op": 0,
+			"fund_ob": 52,
+			"trabajo": 8,
+			"nivelacion": 16,
+			"disponible": 156
+		}
+	}
+}
