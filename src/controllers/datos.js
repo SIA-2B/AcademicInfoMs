@@ -35,7 +35,7 @@ module.exports.enterdatos = async function (req, res) {
 		credito.save()
 			.then((data) => console.log("credit data stored successfully"))
 			.catch((error = res.status(200)) => 
-				res.json({ message: error.message}));
+				res.send({ message: error.message}));
 	} catch(error){
 		res.status(500).send({ error: error.message });
 	}
@@ -46,7 +46,7 @@ module.exports.enterdatos = async function (req, res) {
 		datos.save()
 			.then((data) => res.send("data stored successfully"))
 			.catch((error = res.status(200)) => 
-				res.json({ message: error.message}));
+				res.send({ message: error.message}));
 	} catch(error){
 		res.status(500).send({ error: error.message });
 	}
@@ -56,12 +56,12 @@ module.exports.viewdatos = function (req, res) {
 	datosSchema
 		.find()
 		.then((data) => res.json(data))
-		.catch((error) => res.json({ message: error.message}));
+		.catch((error) => res.send({ message: error.message}));
 }
 
 module.exports.viewdatosone = async function (req, res) {
 	const datos = await studen(filterSchema(req.body));
-	res.send(datos);
+	res.json(datos);
 }
 
 module.exports.putdatos = async function (req, res) {
@@ -77,12 +77,12 @@ module.exports.deletedatos = async function (req, res) {
 	}
 	await creditSchema
 		.remove({"_id": datos["credits_id"]})
-		.then((data) => console.log(''))
-		.catch((error) => res.json({ message: error}));
+		.then((data) => console.log('Se eliminaron la bolsa de credito'))
+		.catch((error) => res.send({ message: error}));
 
 	await datosSchema
 		.remove({"_id": datos["_id"]})
-		.then((data) => console.log(''))
-		.catch((error) => res.json({ message: error}));
-	res.send("Datos eliminados del estudiantes");
+		.then((data) => res.send(`Datos eliminados del estudiantes: ${datos["student_id"]}`))
+		.catch((error) => res.send({ message: error}));
+	;
 }
