@@ -7,11 +7,12 @@ const datosSchema = new mongoose.Schema({
 	// },
 	student_id: {
 		type: String,
+		trim: true,
 		required: true
 	},
 	credits_id: {
 		type: String,
-		required: true
+		required: false
 	},
 	papa: {
 		type: Number,

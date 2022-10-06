@@ -35,9 +35,9 @@ async function creditos(cre) {
 module.exports.enterCourse = async function (req, res) {
 	const filtros = filterSchema(req.body);
 	const course = courseSchema(req.body);
-
+	console.log(req.body);
 	const datos = await studen(filtros);
-	
+	console.log(datos);
 	if(datos == null){
 		res.send("Student is not registered.");
 		return;
@@ -69,7 +69,7 @@ module.exports.enterCourse = async function (req, res) {
 	
 	try {
 		course.save()
-			.then((data) => res.json("The course has been registered"))
+			.then((data) => res.send("The course has been registered"))
 			.catch((error) => res.json({ message: error.message}));
 	} catch(error) {
 		res.status(500).send({error: error.message});
@@ -112,6 +112,7 @@ module.exports.putCourse = async function (req, res) {
 		periodo:periodo,
 		name: name
 	});
+
 	if(course==null){
 		res.send("course not found");
 		return
@@ -128,18 +129,18 @@ module.exports.putCourse = async function (req, res) {
 	else if (course["nota"]>=3 && nota<3) {
 		resta = credits[cre1]+course["credit"];
 	}
-	console.log(resta);
+	// console.log(resta);
 	await creditSchema
 		.updateOne({"_id": datos['credits_id']},
 			JSON.parse(`{"${cre1}": ${resta}}`))
 		.then((data) => console.log('Actualizar creditos'))
-		.catch((error) => res.json({ message: error}));
+		.catch((error) => res.send({ message: error}));
 
 	await courseSchema
 		.updateOne({"_id": course["_id"]}, 
 			{"nota": nota})
 		.then((data) => res.send("Actualizacion de la nota"))
-		.catch((error) => res.json({ message: error}));
+		.catch((error) => res.send({ message: error}));
 	
 }
 
@@ -170,15 +171,15 @@ module.exports.putNota = async function (req, res) {
 		semestre[0][0] = semestre[0][0]+(nota*credit);
 		semestre[0][1] = semestre[0][1]+credit;
 	});
-
 	const papi = semestre[2][0]/semestre[2][1];
 	const papa = semestre[0][0]/semestre[0][1];
 	const pa = semestre[1][0]/semestre[1][1];
+	console.log({'papa':papa,'papi':papi,'pa':pa});
 	await datosSchema
 		.updateOne({"_id": datos["_id"]}, 
 			{'papa':papa,'papi':papi,'pa':pa})
 		.then((data) => res.send("Actualizacion del promedio estudiantil"))
-		.catch((error) => res.json({ message: error}));
+		.catch((error) => res.send({ message: error}));
 }
 
 module.exports.deleteCourse = async function (req, res) {
@@ -215,10 +216,10 @@ module.exports.deleteCourse = async function (req, res) {
 		.updateOne({"_id": datos['credits_id']},
 			JSON.parse(`{"${cre1}": ${resta}, "${cre2}": ${suma}}`))
 		.then((data) => console.log('Actualizar creditos'))
-		.catch((error) => res.json({ message: error}));
+		.catch((error) => res.send({ message: error}));
 
 	await courseSchema
 		.remove({"_id": course["_id"]})
-		.then((data) => res.json(data))
-		.catch((error) => res.json({ message: error}));
+		.then((data) => res.send('Curso eliminado'))
+		.catch((error) => res.send({ message: error}));
 }

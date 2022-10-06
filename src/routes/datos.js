@@ -12,6 +12,7 @@ const router = express.Router();
 const post_datos = '/datos';
 const get_datos = '/datos';
 const get1_datos = '/filter';
+const get2_datos = '/filterid';
 const put_datos = '/datos';
 const delete_datos = '/datos';
 

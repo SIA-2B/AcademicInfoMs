@@ -15,13 +15,21 @@ module.exports.enterdatos = async function (req, res) {
 	const datos = datosSchema(req.body);
 	const credito = creditSchema();
 	const filtros = filterSchema(req.body);
-
+	console.log(req.body);
 	if((await studen(filtros))!=null){
 		res.send("Student is registered.");
 		return;
 	}
-	const creditos = creditCarrera[datos['facultad'].toString()][datos['study_plan_name'].toString()];
+	const fac= datos['facultad'];
+	const name=datos['study_plan_name'];
+	console.log(datos);
+	console.log(fac);
+	console.log(name);
+	const creditos = creditCarrera[fac][name];
 
+	// const creditos = creditCarrera[datos['facultad']][datos['study_plan_name']];
+ //    res.send("salida");
+	// return;
 	credito.dis_op = creditos['dis_op'];
     credito.dis_ob = creditos['dis_ob'];
     credito.fund_op = creditos['fund_op'];
@@ -31,6 +39,9 @@ module.exports.enterdatos = async function (req, res) {
     credito.nivelacion = creditos['nivelacion'];
     credito.disponible = creditos['disponible'];
 
+ //    res.json(credito);
+ //    // res.send("salida");
+	// return;
     try {
 		credito.save()
 			.then((data) => console.log("credit data stored successfully"))
@@ -60,7 +71,9 @@ module.exports.viewdatos = function (req, res) {
 }
 
 module.exports.viewdatosone = async function (req, res) {
+	console.log("hola mundo");
 	const datos = await studen(filterSchema(req.body));
+
 	res.json(datos);
 }
 
