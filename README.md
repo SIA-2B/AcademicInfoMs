@@ -1,5 +1,5 @@
-# background_ms
+# academicinfo
 Micro servicio Historial academico
 
-docker build -t backgroundma .
-docker run -p 9040:9040 --name backgroundma_ms
+docker build -t academicinfo .
+docker run -p 9040:9040 --name academicinfo academicinfo

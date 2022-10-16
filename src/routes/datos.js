@@ -15,6 +15,7 @@ const get1_datos = '/filter';
 const get2_datos = '/filterid';
 const put_datos = '/datos';
 const delete_datos = '/datos';
+const credit = '/credits';
 
 // crear datos
 router.post(post_datos, controllerdatos.enterdatos);
@@ -24,6 +25,9 @@ router.get(get_datos, controllerdatos.viewdatos);
 
 // get datos un solo
 router.get(get1_datos, controllerdatos.viewdatosone);
+
+//get creditos
+router.get(credit, controllerdatos.viewcredits);
 
 // update datos
 router.put(put_datos, controllerdatos.putdatos);

@@ -11,25 +11,25 @@ async function studen(filtros) {
 		.exec();
 }
 
+async function credit(credits_id) {
+	return await creditSchema	
+		.findOne({"_id": credits_id})
+		.exec();
+}
+
 module.exports.enterdatos = async function (req, res) {
 	const datos = datosSchema(req.body);
 	const credito = creditSchema();
 	const filtros = filterSchema(req.body);
-	console.log(req.body);
+	// console.log(req.body);
 	if((await studen(filtros))!=null){
 		res.send("Student is registered.");
 		return;
 	}
-	const fac= datos['facultad'];
-	const name=datos['study_plan_name'];
-	console.log(datos);
-	console.log(fac);
-	console.log(name);
+	const fac = datos['facultad'];
+	const name = datos['study_plan_name'];
 	const creditos = creditCarrera[fac][name];
 
-	// const creditos = creditCarrera[datos['facultad']][datos['study_plan_name']];
- //    res.send("salida");
-	// return;
 	credito.dis_op = creditos['dis_op'];
     credito.dis_ob = creditos['dis_ob'];
     credito.fund_op = creditos['fund_op'];
@@ -39,9 +39,6 @@ module.exports.enterdatos = async function (req, res) {
     credito.nivelacion = creditos['nivelacion'];
     credito.disponible = creditos['disponible'];
 
- //    res.json(credito);
- //    // res.send("salida");
-	// return;
     try {
 		credito.save()
 			.then((data) => console.log("credit data stored successfully"))
@@ -71,10 +68,14 @@ module.exports.viewdatos = function (req, res) {
 }
 
 module.exports.viewdatosone = async function (req, res) {
-	console.log("hola mundo");
 	const datos = await studen(filterSchema(req.body));
-
 	res.json(datos);
+}
+
+module.exports.viewcredits = async function (req, res) {
+	const datos = await studen(filterSchema(req.body));
+	const credits = await credit(datos["credits_id"]);
+	res.json(credits);
 }
 
 module.exports.putdatos = async function (req, res) {

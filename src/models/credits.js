@@ -62,7 +62,7 @@ const creditSchema = new mongoose.Schema({
 		required: false,
 		default: 0
 	},
-	cur_trab_grado: { //Disiplinar optativa
+	cur_trabajo: { //Disiplinar optativa
 		type: Number,
 		required: false,
 		default: 0
