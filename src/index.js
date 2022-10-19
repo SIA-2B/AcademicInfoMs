@@ -2,6 +2,7 @@ const  express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const s = require('./controllers/producerRMQ')
 // const me
 
 require('dotenv').config();
@@ -30,6 +31,7 @@ app.use('/api', courseRouter);
 //routes
 app.get('/', (req, res) => {
 	res.send("Hola mi API");
+	s.connect();
 });
 
 // mongodb
