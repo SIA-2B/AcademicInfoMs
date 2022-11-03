@@ -7,6 +7,7 @@ const router = express.Router();
 
 // direcciones
 const get_filtro = '/filtercourse';
+const get_all = '/allcourse';
 const post_course = '/course';
 const put_course = '/course';
 const delete_course = '/course';

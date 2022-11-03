@@ -35,9 +35,9 @@ async function creditos(cre) {
 module.exports.enterCourse = async function (req, res) {
 	const filtros = filterSchema(req.body);
 	const course = courseSchema(req.body);
-	console.log(req.body);
+	// console.log(req.body);
 	const datos = await studen(filtros);
-	console.log(datos);
+	// console.log(datos);
 	if(datos == null){
 		res.send("Student is not registered.");
 		return;

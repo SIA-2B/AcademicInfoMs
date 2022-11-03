@@ -72,6 +72,14 @@ module.exports.viewdatosone = async function (req, res) {
 	res.json(datos);
 }
 
+module.exports.viewdoble = async function (req, res) {
+	const {student_id} = req.body;
+	datosSchema	
+		.find({"student_id": student_id})
+		.then((data) => res.json(data))
+		.catch((error) => res.send({ message: error.message}));
+}
+
 module.exports.viewcredits = async function (req, res) {
 	const datos = await studen(filterSchema(req.body));
 	const credits = await credit(datos["credits_id"]);
