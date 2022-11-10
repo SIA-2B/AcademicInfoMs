@@ -1,4 +1,4 @@
-const  express = require('express');
+const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const exphbs = require('express-handlebars');
@@ -31,7 +31,7 @@ app.use('/api', courseRouter);
 //routes
 app.get('/', (req, res) => {
 	res.send("Hola mi API");
-	s.connect();
+	// s.connect();
 });
 
 // mongodb
